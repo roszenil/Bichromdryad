@@ -72,7 +72,7 @@ for(i in (C+2):(C+aux1)){
 
 
 for(i in (C+aux1+1):aux2){
-	Q[i,i]<- -(m.1+l.1+prob.10)
+	Q[i,i]<- -(m.1+r.1+l.1+prob.10)
 	Q[i,(i-1)]<-m.1
 	Q[i,(i+1)]<-l.1
 	Q[i,2*C]<- r.1+Q[i,2*C]

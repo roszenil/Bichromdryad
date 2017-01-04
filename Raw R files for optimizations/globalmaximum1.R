@@ -7,7 +7,7 @@ library("nloptr")
 bichrom.dataset<-read.table( "eudicotvals.txt",header=FALSE,sep=",",stringsAsFactors=FALSE) 
 last.state=50 
 
-x.0<- log(c(0.100228746,0.002281069,0.22588321,0.00275355,0.036806304,0.006492386,0.03854713,0.022055368,882.4422402,4.0684168))
+x.0<-log(c(0.125975741,0.002013321,	0.263220692,0.001995657,0.034083811,0.008359046,0.041999762,0.02156642,40.68839451, 3.925946466))
 p.0<-rep(1,2*(last.state+1))/(2*(last.state+1))
 results<-rep(0,11)
 my.options<-list("algorithm"="NLOPT_LN_SBPLX","ftol_rel"=1e-08,"print_level"=1,"maxtime"=170000000, "maxeval"=1000)

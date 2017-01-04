@@ -72,7 +72,7 @@ for(i in (C+2):(C+aux1)){
 
 
 for(i in (C+aux1+1):aux2){
-	Q[i,i]<- -(m.1+l.1+prob.10)
+	Q[i,i]<- -(m.1+l.1+r.1+prob.10)
 	Q[i,(i-1)]<-m.1
 	Q[i,(i+1)]<-l.1
 	Q[i,2*C]<- r.1+Q[i,2*C]
@@ -116,17 +116,7 @@ rhoh.grid<-as.matrix(read.csv("grid10.csv",header=FALSE,sep=","))
 long1<-length(rhoh.grid)
 results<-matrix(rep(0,10*long1),ncol=10)
 
-#lambda_h=0.126546009
-#lambda_w=0.001585289
-# mu_h=0.249549543
-#mu_w=0.002278763
-#rho_h=0.036362131
-#rho_w=0.006527036
-#q_hw=0.040142494
-#q_wh=0.022053161
-#e_h=76.58332678
-#e_w=10.60954323
-logmle<-log(c(0.126546009,0.001585289,0.249549543,0.002278763,0.006527036,0.040142494,0.022053161,76.58332678,10.60954323))
+logmle<-log(c(0.12618457,0.001583056,0.249210759,0.002270911,0.006383748,0.040118644,0.022046124,1.792317852,1.57E-14))
 
 my.options<-list("algorithm"="NLOPT_LN_SBPLX","ftol_rel"=1e-05,"print_level"=1,"maxtime"=86400,"maxeval"=500)
 for(i in 1:long1){
